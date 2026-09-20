@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2026 GPS Forge contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+<gpx version="1.1" creator="Gps simulator" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>L'Hospitalet sample route</name>
+    <trkseg>
+      <trkpt lat="41.3662" lon="2.1169"><ele>20.0</ele></trkpt>
+      <trkpt lat="41.3663" lon="2.1170"><ele>20.5</ele></trkpt>
+      <trkpt lat="41.3664" lon="2.1171"><ele>21.0</ele></trkpt>
+      <trkpt lat="41.3665" lon="2.1172"><ele>21.5</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

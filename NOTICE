@@ -1,0 +1,11 @@
+GPS Forge
+
+Copyright 2026 GPS Forge contributors
+
+This repository contains the GPS Forge v1 development platform, including
+ESP32-S3 firmware, host-side GPS and controls simulators, documentation, and
+reference application assets.
+
+Third-party components and managed dependencies retain their own licenses and
+notices. In particular, ESP-IDF, LVGL, Espressif display components, and QEMU
+are distributed under their respective upstream terms.

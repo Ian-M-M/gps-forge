@@ -1,0 +1,13 @@
+# Generated ESP-IDF files
+build/
+managed_components/
+.cache/
+sdkconfig.old
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Python packaging artifacts
+*.egg-info/
+dist/

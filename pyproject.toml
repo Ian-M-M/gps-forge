@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 GPS Forge contributors
+# SPDX-License-Identifier: Apache-2.0
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gps-forge"
+version = "0.1.0"
+description = "Host-side GPS and virtual controls tools for GPS Forge"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+[project.scripts]
+gps-sim = "sim.gps.gps_sim:main"
+controls-sim = "sim.controls.controls_sim:main"
+
+[tool.setuptools.packages.find]
+include = ["sim", "sim.*"]
+
+[tool.setuptools.package-data]
+"sim.gps" = ["routes/*.gpx"]

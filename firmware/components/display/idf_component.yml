@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 GPS Forge contributors
+# SPDX-License-Identifier: Apache-2.0
+
+dependencies:
+  espressif/esp_lcd_qemu_rgb: ^1.0.2
+  espressif/esp_lcd_panel_io_additions: ^1.0.1
+  espressif/esp_lcd_st7701: ^2.0.2

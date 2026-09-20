@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2026 GPS Forge contributors
+# SPDX-License-Identifier: Apache-2.0
+
+menu "GPS Forge"
+
+choice GPS_PLATFORM
+    prompt "Display and input backend"
+    default GPS_PLATFORM_QEMU
+
+    config GPS_PLATFORM_QEMU
+        bool "Espressif QEMU"
+
+    config GPS_PLATFORM_CROWPANEL
+        bool "Elecrow 2.1-inch CrowPanel V1.0"
+endchoice
+
+config GPS_UART_RX_GPIO
+    int "Physical GPS RX GPIO (-1 disables GPS until wired)"
+    depends on GPS_PLATFORM_CROWPANEL
+    range -1 48
+    default -1
+    help
+        Connect the receiver TX signal to a verified, exposed CrowPanel GPIO.
+        The board schematic exposes UART0 on the FPC connector, so no UART1
+        pin is selected by default. Configure the chosen route after checking
+        your connector and console wiring.
+
+config GPS_UART_PORT
+    int "Physical GPS UART peripheral"
+    depends on GPS_PLATFORM_CROWPANEL
+    range 0 1
+    default 1
+    help
+        UART1 is the default because UART0 is normally used by the ESP-IDF
+        console. Select UART0 only when the receiver is wired to the board's
+        exposed UART0 connector and the console conflict is acceptable.
+
+endmenu
